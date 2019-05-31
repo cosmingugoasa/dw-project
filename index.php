@@ -45,11 +45,8 @@ if(isset($_GET["message"])){
       <form action="login.php" method="POST">
           <input type="text" placeholder="e-mail" class="field" name="login_name"><br>
           <input type="password" placeholder="password" class="field" name="login_pass"><br>
-          <input type="submit" value="login" class="btn" name="submit-login">
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;" name="submit-login">Login</button>
       </form>
-      <div class="pass-link">
-          <a href="#" >Lost your password?</a>
-      </div>
     </div>
 
     <div class="col" style="text-align: center;">
@@ -60,15 +57,15 @@ if(isset($_GET["message"])){
           <input type="password" placeholder="repeat password" class="field" name="register_pass_verification"><br>
           <input type="text" placeholder="nome" class="field" name="register_name"><br>
           <input type="text" placeholder="cognome" class="field" name="register_surname"><br>
-          <input type="submit" value="register" class="btn" name="submit-registration">
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;" name="submit-registration">Register</button>
       </form>
     </div>
 
     <div class="col" style="text-align: center;">
         <h1>Cerca Veicolo</h1><br>
-        <form action="#" method="POST">
+        <form action="search_vehicle.php" method="POST">
             <input type="text" placeholder="targa" class="field" name="targa"><br>
-            <input type="submit" value="search" class="btn" name="submit-search">
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;" name="submit-search">Search</button>
         </form>
     </div>
 </div>
