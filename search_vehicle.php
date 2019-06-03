@@ -30,7 +30,7 @@ if(mysqli_num_rows($searchvehicle_result)>0){
                     <table class= \"table\">
                         <tbody>
                             <tr>
-                                <td style= \" vertical-align: middle\">Targa : ".$row["plate"]." €"."</td>
+                                <td style= \" vertical-align: middle\">Targa : ".$row["plate"]."</td>
                                 <td style= \" vertical-align: middle\">Dal : ".$row["payment_date"]."</td>
                                 <td style= \" vertical-align: middle\">Al : ".$row["expiry_date"]."</td>
                             </tr>                            
