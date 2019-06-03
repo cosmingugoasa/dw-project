@@ -22,6 +22,7 @@ echo "
         
         <button type=\"submit\" class=\"btn btn-primary\" name=\"submit-contract-registration\">Conferma Contratto</button>
     </form>
+    
 </div>
 ";
 

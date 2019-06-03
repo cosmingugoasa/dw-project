@@ -39,7 +39,35 @@ session_start();
                 if(!empty($_SESSION["username"])){
                     echo "
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"includes/db_delete_account.php \">Cancella Account</a>
+                        
+                        <!-- Button trigger modal -->
+                        <button type=\"button\" class=\"btn btn-outline-danger\" data-toggle=\"modal\" data-target=\"#confirmModal\">
+                          Cancella Account
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class=\"modal fade\" id=\"confirmModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+                          <div class=\"modal-dialog\" role=\"document\">
+                            <div class=\"modal-content\">
+                              <div class=\"modal-header\">
+                                <h5 class=\"modal-title\" id=\"exampleModalLabel\">Conferma cancellazione account</h5>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                                  <span aria-hidden=\"true\">&times;</span>
+                                </button>
+                              </div>
+                              <div class=\"modal-body\">
+                                <p>Sicuro di voler cancellare il tuo account?</p>
+                                <p>L'operazione è irreversibile.</p>
+                              </div>
+                              <div class=\"modal-footer\">
+                                  <form action='includes/db_delete_account.php' method='POST'>
+                                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                                    <button type=\"submit\" class=\"btn btn-danger\">Confirm</button>
+                                  </form>  
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                     </li>
                     ";
                 }
